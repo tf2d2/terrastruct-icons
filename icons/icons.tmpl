@@ -1,0 +1,17 @@
+package {{ .Provider | lower }}
+
+import (
+	"github.com/tf2d2/terrastruct-icons/icons"
+)
+
+var (
+	Icons = []*icons.Icon{
+  {{- range .Icons }}
+		{
+			Cloud:        "{{ .Cloud }}",
+			Title:        "{{ .Title }}",
+			URL:          "{{ .URL }}",
+		},
+  {{- end }}
+	}
+)
